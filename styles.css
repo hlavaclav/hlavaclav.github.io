@@ -1,0 +1,682 @@
+/* === Základní nastavení === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Elegantní svatební barvy */
+    --primary: #8B7355;        /* Teplá zlatohnědá */
+    --primary-light: #C4A77D;  /* Světlá zlatá */
+    --accent: #D4AF87;         /* Jemná meruňková/zlatá */
+    --rose: #E8CCD0;           /* Jemná růžová */
+    --rose-light: #F5E6E8;     /* Velmi světlá růžová */
+    
+    /* Neutrální barvy */
+    --dark: #3E3E3E;           /* Tmavě šedá */
+    --medium: #707070;         /* Středně šedá */
+    --light: #F8F8F8;          /* Velmi světlá */
+    --white: #FFFFFF;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Georgia', 'Palatino', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: var(--dark);
+    overflow-x: hidden;
+    background: var(--white);
+}
+
+/* === Jemné pozadí === */
+.soft-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        var(--rose-light) 0%,
+        var(--white) 50%,
+        var(--rose-light) 100%
+    );
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* === Navigace === */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 15px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-vh {
+    color: var(--primary);
+    font-weight: 600;
+    font-family: 'Georgia', serif;
+}
+
+.logo-eselka {
+    color: var(--medium);
+    font-weight: 300;
+    font-style: italic;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--medium);
+    font-weight: 400;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* === Hero sekce === */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: var(--medium);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 300;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    color: var(--dark);
+    animation: fadeInUp 1s ease 0.2s backwards;
+    line-height: 1.2;
+}
+
+.title-vh {
+    color: var(--primary);
+    font-weight: 400;
+}
+
+.ampersand {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--accent);
+    font-size: 0.9em;
+    margin: 0 0.5rem;
+    font-weight: 300;
+}
+
+.elegant-line {
+    height: 1px;
+    width: 150px;
+    margin: 2rem auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--primary),
+        transparent
+    );
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.wedding-date {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--medium);
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease 0.8s backwards;
+}
+
+/* === Odpočet === */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    animation: fadeInUp 1s ease 1s backwards;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--primary);
+    font-family: 'Georgia', serif;
+}
+
+.countdown-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--medium);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Náš příběh === */
+.story {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+}
+
+.story h2, .details h2, .program h2, .rsvp h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    color: var(--dark);
+    position: relative;
+}
+
+.story h2::after, .details h2::after, .program h2::after, .rsvp h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: var(--primary);
+    margin: 1.5rem auto 0;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.story-card {
+    background: var(--light);
+    padding: 3rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 3px solid var(--accent);
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.story-date {
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.story-card p {
+    line-height: 1.8;
+    color: var(--medium);
+}
+
+/* === Detaily === */
+.details {
+    padding: 6rem 2rem;
+    background: var(--rose-light);
+}
+
+.details-grid {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.detail-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.detail-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.detail-time {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.detail-location {
+    color: var(--medium);
+    line-height: 1.8;
+}
+
+.dress-code {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5rem;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.dress-code h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.dress-code p {
+    color: var(--medium);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.dress-colors {
+    color: var(--primary) !important;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* === Program === */
+.program {
+    padding: 6rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        var(--accent),
+        var(--primary),
+        var(--accent)
+    );
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 0.3rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 3px solid var(--primary);
+}
+
+.timeline-time {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.timeline-content p {
+    color: var(--medium);
+    font-size: 1.05rem;
+}
+
+/* === RSVP === */
+.rsvp {
+    padding: 6rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--light);
+}
+
+.rsvp-intro {
+    text-align: center;
+    color: var(--medium);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rsvp-form input:focus,
+.rsvp-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.radio-group p {
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--medium);
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    cursor: pointer;
+    accent-color: var(--primary);
+}
+
+.submit-button {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    background: var(--primary);
+    color: var(--white);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.submit-button:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* === Footer === */
+footer {
+    background: var(--dark);
+    color: var(--light);
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.ampersand-small {
+    font-style: italic;
+    color: var(--accent);
+    margin: 0 0.5rem;
+}
+
+.footer-date {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 1.5rem 0;
+    letter-spacing: 1px;
+}
+
+.footer-tagline {
+    font-style: italic;
+    color: var(--medium);
+    margin: 1rem 0 2rem;
+    font-size: 1.05rem;
+}
+
+.footer-contact {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-contact p {
+    color: var(--medium);
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* === Responzivní design === */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .nav-menu {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .countdown {
+        gap: 2rem;
+    }
+    
+    .countdown-number {
+        font-size: 2.5rem;
+    }
+    
+    .timeline {
+        padding-left: 1rem;
+    }
+    
+    .timeline-item {
+        padding-left: 2rem;
+    }
+    
+    .rsvp-form {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .countdown {
+        gap: 1.5rem;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+}
+

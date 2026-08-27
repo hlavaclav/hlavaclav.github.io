@@ -2,10 +2,203 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>VHeselka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svatba Verča & Honza</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>VHeselka</h1>
-    <p>Tohle je moje stránka na GitHub Pages.</p>
+    <div class="soft-background"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-vh">VH</span><span class="logo-eselka">eselka</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Domů</a></li>
+                <li><a href="#story">Náš příběh</a></li>
+                <li><a href="#details">Detaily</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">Oddávají se</p>
+                <h1 class="hero-title">
+                    <span class="title-vh">V</span>erča <span class="ampersand">&</span> <span class="title-vh">H</span>onza
+                </h1>
+                <div class="elegant-line"></div>
+                <p class="wedding-date">15. června 2027</p>
+                <p class="hero-description">
+                    Rádi bychom s vámi sdíleli ten nejkrásnější den našeho života.
+                    Budeme vděční, pokud s námi oslavíte naši lásku a začátek společné cesty.
+                </p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">0</span>
+                        <span class="countdown-label">dní</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">0</span>
+                        <span class="countdown-label">hodin</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">0</span>
+                        <span class="countdown-label">minut</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="story" class="story">
+            <h2>Náš příběh</h2>
+            <div class="story-content">
+                <div class="story-card">
+                    <div class="card-icon">💕</div>
+                    <h3>První setkání</h3>
+                    <p class="story-date">Jaro 2020</p>
+                    <p>Poprvé jsme se potkali na koncertě v pražském klubu. 
+                    Honza nabídl Verče své místo u baru a my jsme pak celý večer jen povídali.</p>
+                </div>
+                <div class="story-card">
+                    <div class="card-icon">💍</div>
+                    <h3>Zasnoubení</h3>
+                    <p class="story-date">Léto 2025</p>
+                    <p>Honza požádal Verču o ruku při západu slunce na pláži v Chorvatsku.
+                    Byla to ta nejkrásnější chvíle našich životů.</p>
+                </div>
+                <div class="story-card">
+                    <div class="card-icon">🤵👰</div>
+                    <h3>Svatba</h3>
+                    <p class="story-date">Léto 2027</p>
+                    <p>A teď jsme tady - připraveni říct si "ano" obklopeni našimi 
+                    nejbližšími a začít novou kapitolu společného života.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="details" class="details">
+            <h2>Detaily svatby</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">⛪</div>
+                    <h3>Obřad</h3>
+                    <p class="detail-time">14:00</p>
+                    <p class="detail-location">Kostel sv. Mikuláše<br>Malá Strana, Praha</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🥂</div>
+                    <h3>Hostina</h3>
+                    <p class="detail-time">16:00</p>
+                    <p class="detail-location">Vila Richter<br>Pražský hrad</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🎵</div>
+                    <h3>Večírek</h3>
+                    <p class="detail-time">20:00</p>
+                    <p class="detail-location">Tanec, zábava a oslava<br>Do ranních hodin</p>
+                </div>
+            </div>
+            <div class="dress-code">
+                <h3>Dress code</h3>
+                <p>Koktejlové šaty & elegantní obleky</p>
+                <p class="dress-colors">Barvy svatby: šedobílá, zlatá a jemná růžová</p>
+            </div>
+        </section>
+
+        <section id="program" class="program">
+            <h2>Program dne</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">13:30</div>
+                    <div class="timeline-content">
+                        <h3>Příchod hostů</h3>
+                        <p>Shromáždění u kostela</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-content">
+                        <h3>Svatební obřad</h3>
+                        <p>Kostel sv. Mikuláše</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-content">
+                        <h3>Gratulace a foto</h3>
+                        <p>Před kostelem</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00</div>
+                    <div class="timeline-content">
+                        <h3>Svatební hostina</h3>
+                        <p>Vila Richter - přípitek a menu</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3>Krájení dortu</h3>
+                        <p>První tanec novomanželů</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00</div>
+                    <div class="timeline-content">
+                        <h3>Večerní zábava</h3>
+                        <p>Hudba, tanec a oslava</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rsvp" class="rsvp">
+            <h2>Potvrzení účasti</h2>
+            <p class="rsvp-intro">Prosíme o potvrzení vaší účasti do 1. května 2027</p>
+            <form class="rsvp-form">
+                <input type="text" placeholder="Vaše jméno (a příjmení)" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Telefon">
+                
+                <div class="radio-group">
+                    <p>Počet hostů:</p>
+                    <label><input type="radio" name="guests" value="1" checked> 1 osoba</label>
+                    <label><input type="radio" name="guests" value="2"> 2 osoby</label>
+                    <label><input type="radio" name="guests" value="family"> Rodina (více osob)</label>
+                </div>
+                
+                <div class="radio-group">
+                    <p>Zúčastním se:</p>
+                    <label><input type="radio" name="attendance" value="yes" checked> Ano, přijdu</label>
+                    <label><input type="radio" name="attendance" value="no"> Bohužel nemohu</label>
+                </div>
+                
+                <textarea placeholder="Speciální požadavky, alergie nebo vzkaz pro novomanžele..." rows="4"></textarea>
+                <button type="submit" class="submit-button">Potvrdit účast</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-vh">V</span><span class="ampersand-small">&</span><span class="logo-vh">H</span>
+            </div>
+            <p class="footer-date">15. června 2027</p>
+            <p class="footer-tagline">S láskou čekáme na oslavu s vámi</p>
+            <div class="footer-contact">
+                <p>Otázky? Kontaktujte nás:</p>
+                <p>📧 verca.honza.svatba@email.cz | 📱 +420 777 123 456</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
