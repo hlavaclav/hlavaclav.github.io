@@ -3,199 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Svatba Václav & Hanka</title>
+    <meta name="description" content="Svatební stránky Václava a Hanky, 21.–22. května 2027 v Paběnickém mlýně.">
+    <title>VHeselka | Václav &amp; Hanka | 21.–22. května 2027</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="soft-background"></div>
-    
+    <div class="soft-background" aria-hidden="true"></div>
+
     <header>
-        <nav>
-            <div class="logo">
-                <span class="logo-vh">VH</span><span class="logo-eselka">eselka</span>
-            </div>
+        <nav class="site-nav" aria-label="Hlavní navigace">
+            <a class="logo" href="#home" aria-label="VHeselka, Václav a Hanka">
+                <span class="brand-vh">VH</span><span class="brand-rest">eselka</span>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#home">Domů</a></li>
-                <li><a href="#story">Náš příběh</a></li>
-                <li><a href="#details">Detaily</a></li>
+                <li><a href="#home">Úvod</a></li>
+                <li><a href="#details">Informace</a></li>
                 <li><a href="#program">Program</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
+                <li><a href="#rsvp">Potvrzení účasti</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <div class="hero-content">
-                <p class="hero-subtitle">Oddávají se</p>
-                <h1 class="hero-title">
-                    <span class="title-vh">V</span>áclav <span class="ampersand">&</span> <span class="title-vh">H</span>anka
-                </h1>
-                <div class="elegant-line"></div>
-                <p class="wedding-date">15. června 2027</p>
-                <p class="hero-description">
-                    Rádi bychom s vámi sdíleli ten nejkrásnější den našeho života.
-                    Budeme vděční, pokud s námi oslavíte naši lásku a začátek společné cesty.
+            <svg class="botanical botanical-left" viewBox="0 0 180 360" role="img" aria-label="Jemná ilustrace lučních květin">
+                <path d="M98 350C83 274 90 174 113 42" />
+                <path d="M102 273C72 249 56 217 52 183M101 229c28-27 46-57 48-91M108 160c-25-22-39-48-42-77M112 103c19-18 29-38 31-59" />
+                <circle cx="51" cy="181" r="9" /><circle cx="149" cy="137" r="8" />
+                <circle cx="67" cy="26" r="7" /><circle cx="143" cy="43" r="6" />
+            </svg>
+            <svg class="botanical botanical-right" viewBox="0 0 180 360" role="img" aria-label="Jemná ilustrace lučních květin">
+                <path d="M83 350c18-77 9-176-14-308" />
+                <path d="M79 274c30-25 46-57 49-91M80 231c-28-27-46-57-48-91M73 159c25-22 39-48 42-77M68 103C49 85 39 65 37 44" />
+                <circle cx="130" cy="183" r="9" /><circle cx="32" cy="138" r="8" />
+                <circle cx="113" cy="27" r="7" /><circle cx="37" cy="43" r="6" />
+            </svg>
+            <div class="hero-content reveal">
+                <p class="hero-brand" aria-label="VHeselka">
+                    <span class="brand-vh">VH</span><span class="brand-rest">eselka</span>
                 </p>
-                <div class="countdown" id="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">0</span>
-                        <span class="countdown-label">dní</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">0</span>
-                        <span class="countdown-label">hodin</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">0</span>
-                        <span class="countdown-label">minut</span>
-                    </div>
+                <h1>Václav <em>&amp;</em> Hanka</h1>
+                <div class="elegant-line" aria-hidden="true"></div>
+                <p class="wedding-date">21.–22. května 2027</p>
+                <p class="hero-description">Budeme rádi, když tento svatební víkend strávíte s námi.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#rsvp">Potvrdit účast</a>
+                    <a class="button button-text" href="#details">Zjistit více <span aria-hidden="true">↓</span></a>
                 </div>
             </div>
         </section>
 
-        <section id="story" class="story">
-            <h2>Náš příběh</h2>
-            <div class="story-content">
-                <div class="story-card">
-                    <div class="card-icon">💕</div>
-                    <h3>První setkání</h3>
-                    <p class="story-date">Jaro 2020</p>
-                    <p>Poprvé jsme se potkali na koncertě v pražském klubu. 
-                    Honza nabídl Verče své místo u baru a my jsme pak celý večer jen povídali.</p>
-                </div>
-                <div class="story-card">
-                    <div class="card-icon">💍</div>
-                    <h3>Zasnoubení</h3>
-                    <p class="story-date">Léto 2025</p>
-                    <p>Honza požádal Verču o ruku při západu slunce na pláži v Chorvatsku.
-                    Byla to ta nejkrásnější chvíle našich životů.</p>
-                </div>
-                <div class="story-card">
-                    <div class="card-icon">🤵👰</div>
-                    <h3>Svatba</h3>
-                    <p class="story-date">Léto 2027</p>
-                    <p>A teď jsme tady - připraveni říct si "ano" obklopeni našimi 
-                    nejbližšími a začít novou kapitolu společného života.</p>
-                </div>
+        <section id="details" class="details section">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Těšíme se na vás</p>
+                <h2>Svatební víkend</h2>
+                <p>Čekají nás dva dny v krásném prostředí Paběnického mlýna.</p>
             </div>
-        </section>
 
-        <section id="details" class="details">
-            <h2>Detaily svatby</h2>
             <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">⛪</div>
-                    <h3>Obřad</h3>
-                    <p class="detail-time">14:00</p>
-                    <p class="detail-location">Kostel sv. Mikuláše<br>Malá Strana, Praha</p>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">🥂</div>
-                    <h3>Hostina</h3>
-                    <p class="detail-time">16:00</p>
-                    <p class="detail-location">Vila Richter<br>Pražský hrad</p>
-                </div>
-                <div class="detail-card">
-                    <div class="detail-icon">🎵</div>
-                    <h3>Večírek</h3>
-                    <p class="detail-time">20:00</p>
-                    <p class="detail-location">Tanec, zábava a oslava<br>Do ranních hodin</p>
-                </div>
+                <article class="detail-card reveal">
+                    <span class="detail-number">01</span>
+                    <p class="detail-label">Pátek</p>
+                    <h3>Svatební obřad</h3>
+                    <p>21. května 2027</p>
+                </article>
+                <article class="detail-card detail-card-featured reveal">
+                    <span class="detail-number">02</span>
+                    <p class="detail-label">Místo</p>
+                    <h3>Paběnický mlýn</h3>
+                    <p>místo našeho společného víkendu</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Paběnický+mlýn" target="_blank" rel="noopener noreferrer">Otevřít mapu <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="detail-card reveal">
+                    <span class="detail-number">03</span>
+                    <p class="detail-label">Sobota</p>
+                    <h3>Pokračování oslavy</h3>
+                    <p>22. května 2027</p>
+                </article>
             </div>
-            <div class="dress-code">
-                <h3>Dress code</h3>
-                <p>Koktejlové šaty & elegantní obleky</p>
-                <p class="dress-colors">Barvy svatby: šedobílá, zlatá a jemná růžová</p>
+
+            <div class="gift-note reveal">
+                <span class="gift-icon" aria-hidden="true">✳</span>
+                <div>
+                    <h3>Malé přání</h3>
+                    <p>Místo darů budeme rádi za příspěvek na naši svatbu.</p>
+                </div>
             </div>
         </section>
 
-        <section id="program" class="program">
-            <h2>Program dne</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-time">13:30</div>
-                    <div class="timeline-content">
-                        <h3>Příchod hostů</h3>
-                        <p>Shromáždění u kostela</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-time">14:00</div>
-                    <div class="timeline-content">
+        <section id="program" class="program section">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Poznamenejte si</p>
+                <h2>Termín</h2>
+                <p>Podrobnosti programu a přesné časy ještě doplníme.</p>
+            </div>
+            <div class="program-list">
+                <div class="program-item reveal">
+                    <time datetime="2027-05-21">21. 5.</time>
+                    <div>
                         <h3>Svatební obřad</h3>
-                        <p>Kostel sv. Mikuláše</p>
+                        <p>Paběnický mlýn</p>
                     </div>
+                    <span aria-hidden="true">→</span>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-time">15:00</div>
-                    <div class="timeline-content">
-                        <h3>Gratulace a foto</h3>
-                        <p>Před kostelem</p>
+                <div class="program-item reveal">
+                    <time datetime="2027-05-22">22. 5.</time>
+                    <div>
+                        <h3>Společný svatební víkend</h3>
+                        <p>Paběnický mlýn</p>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-time">16:00</div>
-                    <div class="timeline-content">
-                        <h3>Svatební hostina</h3>
-                        <p>Vila Richter - přípitek a menu</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-time">18:00</div>
-                    <div class="timeline-content">
-                        <h3>Krájení dortu</h3>
-                        <p>První tanec novomanželů</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-time">20:00</div>
-                    <div class="timeline-content">
-                        <h3>Večerní zábava</h3>
-                        <p>Hudba, tanec a oslava</p>
-                    </div>
+                    <span aria-hidden="true">→</span>
                 </div>
             </div>
         </section>
 
-        <section id="rsvp" class="rsvp">
-            <h2>Potvrzení účasti</h2>
-            <p class="rsvp-intro">Prosíme o potvrzení vaší účasti do 1. května 2027</p>
-            <form class="rsvp-form">
-                <input type="text" placeholder="Vaše jméno (a příjmení)" required>
-                <input type="email" placeholder="Email" required>
-                <input type="tel" placeholder="Telefon">
-                
-                <div class="radio-group">
-                    <p>Počet hostů:</p>
-                    <label><input type="radio" name="guests" value="1" checked> 1 osoba</label>
-                    <label><input type="radio" name="guests" value="2"> 2 osoby</label>
-                    <label><input type="radio" name="guests" value="family"> Rodina (více osob)</label>
-                </div>
-                
-                <div class="radio-group">
-                    <p>Zúčastním se:</p>
-                    <label><input type="radio" name="attendance" value="yes" checked> Ano, přijdu</label>
-                    <label><input type="radio" name="attendance" value="no"> Bohužel nemohu</label>
-                </div>
-                
-                <textarea placeholder="Speciální požadavky, alergie nebo vzkaz pro novomanžele..." rows="4"></textarea>
-                <button type="submit" class="submit-button">Potvrdit účast</button>
+        <section id="rsvp" class="rsvp section">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Dejte nám vědět</p>
+                <h2>Potvrzení účasti</h2>
+                <p>Prosíme o odpověď, ať víme, s kým můžeme během svatebního víkendu počítat.</p>
+            </div>
+            <form class="rsvp-form reveal" id="rsvp-form" novalidate>
+                <label>
+                    Jméno a příjmení
+                    <input type="text" name="name" autocomplete="name" placeholder="Jak se jmenujete?" required>
+                </label>
+                <label>
+                    E-mail
+                    <input type="email" name="email" autocomplete="email" placeholder="kam vám můžeme napsat?" required>
+                </label>
+                <fieldset class="radio-group">
+                    <legend>Zúčastníte se?</legend>
+                    <label><input type="radio" name="attendance" value="yes" required> Ano, ráda / rád přijdu</label>
+                    <label><input type="radio" name="attendance" value="no"> Bohužel se nezúčastním</label>
+                </fieldset>
+                <label>
+                    Počet osob
+                    <select name="guests">
+                        <option value="1">1 osoba</option>
+                        <option value="2">2 osoby</option>
+                        <option value="3">3 osoby</option>
+                        <option value="4">4 osoby</option>
+                    </select>
+                </label>
+                <label>
+                    Vzkaz nebo informace pro nás
+                    <textarea name="message" placeholder="Alergie, stravování nebo cokoli, co bychom měli vědět..." rows="4"></textarea>
+                </label>
+                <button type="submit" class="button button-primary submit-button">Odeslat odpověď</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <span class="logo-vh">V</span><span class="ampersand-small">&</span><span class="logo-vh">H</span>
-            </div>
-            <p class="footer-date">15. června 2027</p>
-            <p class="footer-tagline">S láskou čekáme na oslavu s vámi</p>
-            <div class="footer-contact">
-                <p>Otázky? Kontaktujte nás:</p>
-                <p>📧 verca.honza.svatba@email.cz | 📱 +420 777 123 456</p>
-            </div>
+            <div class="footer-logo"><span class="brand-vh">VH</span><span class="brand-rest">eselka</span></div>
+            <p class="footer-date">21.–22. května 2027 · Paběnický mlýn</p>
+            <p class="footer-contact">Máte otázky? <a href="mailto:hla.vac.lav@seznam.cz">hla.vac.lav@seznam.cz</a> · <a href="tel:+420728760189">728 760 189</a></p>
         </div>
     </footer>
 
